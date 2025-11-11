@@ -1,5 +1,74 @@
-# SSAST: Self-Supervised Audio Spectrogram Transformer
+ 🐸 UniBioSound: A Novel Bioacoustic Foundation Model Architecture
 
+**UniBioSound** is a next-generation foundation model for **bioacoustic analysis**, designed to recognize and classify animal sounds using **self-supervised learning**, **few-shot inference**, and **graph-based taxonomy modeling**.
+
+---
+
+## 🌿 Overview
+Traditional bioacoustic systems depend heavily on labeled data, which are often limited or noisy in real-world rainforest environments.  
+**UniBioSound** learns robust, universal representations of animal sounds through **self-supervised pretraining** and **taxonomy-aware reasoning**.
+
+---
+
+## 🧠 Architecture Steps
+
+### 🩵 Step 1: Input Data Preparation
+- Segment long rainforest recordings into 5–10 second clips  
+- Normalize, trim silence, and augment (time-shift, pitch-scale, add noise)  
+- Convert audio into **Mel spectrograms** or retain **raw waveforms**
+
+---
+
+### 🧩 Step 2: Self-Supervised Pretraining (Foundation Stage)
+- Train a **Transformer encoder** on unlabeled audio clips  
+- Use objectives such as:
+  - Masked spectrogram prediction  
+  - Contrastive audio representation learning  
+- Learn a **universal bioacoustic embedding**
+
+---
+
+### 🐦 Step 3: Few-Shot Prompt-Based Inference
+- Choose a few labeled examples (*support set*) per species  
+- Encode **support** and **query** clips with the pretrained encoder  
+- Use **attention-based similarity matching** for classification  
+
+---
+
+### 🔤 Step 4: Multimodal Audio–Text Embedding (Optional)
+- Collect textual descriptions for species (e.g., “a frog with a high-pitched croak”)  
+- Encode text via **BERT** or similar  
+- Train **joint audio–text embeddings** for **zero-shot species recognition**
+
+---
+
+### 🌳 Step 5: Graph Neural Network Head (Taxonomy-Aware Prediction)
+- Build a **taxonomy graph** (species → genus → family)  
+- Pass audio embeddings through a **GNN** layer  
+- Exploit biological relationships for better generalization  
+
+---
+
+### 🕒 Step 6: Temporal Memory Module
+- Add a **memory mechanism** (Transformer-XL, RWKV, etc.)  
+- Capture **calling patterns over time**  
+- Improve sequence-level prediction consistency  
+
+---
+
+### 🧪 Step 7: Training Strategy
+- **Pretrain** encoder on all unlabeled audio  
+- **Fine-tune** with few-shot support–query tasks  
+- Use **pseudo-labeling** and **consistency regularization** for unlabeled data  
+
+---
+
+### 🚀 Step 8: Inference Pipeline
+1. Segment and preprocess input audio  
+2. Extract embeddings using the encoder  
+3. Perform few-shot similarity matching  
+4. Apply GNN and temporal memory  
+5. Output predicted species labels
 # SSAST: Self-Supervised Audio Spectrogram Transformer
 
 
