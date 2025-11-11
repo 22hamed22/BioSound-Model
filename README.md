@@ -69,6 +69,14 @@ Traditional bioacoustic systems depend heavily on labeled data, which are often 
 3. Perform few-shot similarity matching  
 4. Apply GNN and temporal memory  
 5. Output predicted species labels
+
+
+## installation:
+install the requirments and run the code3.py based on your data.
+
+I used transformer below for this project:
+
+
 # SSAST: Self-Supervised Audio Spectrogram Transformer
 
 
