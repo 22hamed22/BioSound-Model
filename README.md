@@ -72,7 +72,8 @@ Traditional bioacoustic systems depend heavily on labeled data, which are often 
 
 
 ## installation:
-install the requirments and run the code3.py based on your data.
+install the requirments and run the code3.py based on your data or
+this taxonomy tailored for this data: https://www.kaggle.com/competitions/birdclef-2025/data
 
 I used transformer below for this project:
 
